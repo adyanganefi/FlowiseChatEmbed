@@ -51,8 +51,12 @@ export const TextInput = (props: Props) => {
   const checkIfInputIsValid = () => inputValue() !== '' && warningMessage() === '' && inputRef?.reportValidity();
 
   const submit = () => {
+    console.log("SUBMITTTTTTTT");
+    console.log("VALUENYA: ", inputValue());
+
     if (checkIfInputIsValid()) props.onSubmit(inputValue());
     setInputValue('');
+
   };
 
   const submitWhenEnter = (e: KeyboardEvent) => {
